@@ -1,8 +1,8 @@
+flask
+pandas
+scikit-learn
+numpy==1.23.5
 tensorflow==2.10.0
 keras==2.10.0
-flask
-gunicorn
-numpy
 pillow
-scikit-learn
-pandas
+gunicorn
