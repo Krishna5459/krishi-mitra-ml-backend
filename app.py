@@ -71,11 +71,13 @@ def predict_price():
 
 
 # =================================================
-# 2️⃣ DISEASE ANALYZER (NEW FEATURE)
+# 2️⃣ DISEASE ANALYZER (FIXED)
 # =================================================
 
 DISEASE_MODEL_PATH = "model/plant_disease_model.h5"
-disease_model = load_model(DISEASE_MODEL_PATH)
+
+# 🔧 CRITICAL FIX IS HERE
+disease_model = load_model(DISEASE_MODEL_PATH, compile=False)
 
 UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
